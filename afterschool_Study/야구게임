@@ -1,0 +1,75 @@
+package First;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class base {
+
+	public static void main(String[] args) {
+        Random rd = new Random();
+        Scanner Scan = new Scanner(System.in);
+        
+        int S = 0;
+        int b = 0;
+        int num=0;
+        int cnt=0;
+        
+        int f = rd.nextInt(9)+1;
+        int s = rd.nextInt(9)+1;
+        int t = rd.nextInt(9)+1;
+       
+        while(f==s||s==t||t==f) {
+            f = rd.nextInt(9)+1;
+            s = rd.nextInt(9)+1;
+            t = rd.nextInt(9)+1;
+        
+        }
+       
+        while (true) {
+        	while (true) {
+                int number = Scan.nextInt();
+                	num=number;
+                	if (num>999 || num<99) {
+                	System.out.println("다시 입력");
+                	}
+                	else if (num<999 || num>99) {
+                		break;
+                    }
+                }
+        		
+        		b=0;
+        		S=0;
+                
+        		int k = num % 10; 
+                num = num / 10; 
+                int j = num % 10;
+                num = num / 10;
+                int i = num % 10;
+                System.out.printf(" i : %d %n j : %d %n k : %d",i,j,k);
+                System.out.println(" ");
+        	
+            
+            if (i==f) ++S;
+            if (j==s) ++S;
+            if (k==t) ++S;   
+                
+        	if (i==s || i==t) ++b;
+        	if (j==f || j==t) ++b;
+        	if (k==f || k==s) ++b;
+        	
+        	System.out.println(" "+S+ "스트라이크 "+b+" 볼 ");
+        	cnt++;
+        	if (S==3) {
+        		System.out.println(" ");
+        		System.out.printf(" 총 %d 만큼 시도하여 맞췄습니다 ",cnt);
+        		System.out.println("3 스트라이크로 종료합니다");
+        		break;
+        	}
+        	else continue;
+        	
+        }
+	
+	
+	
+	}
+}

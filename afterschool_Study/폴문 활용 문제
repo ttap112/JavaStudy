@@ -1,0 +1,32 @@
+임의 정수를 입력하고 세로로 순서순으로 출력
+입력
+123456
+출력
+6
+5
+4
+3
+2
+1
+
+--------------------------------------------------
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner Scan = new Scanner(System.in);
+		
+		int num = Scan.nextInt();
+		
+		for (int r=6; r>=0; r--) {	
+			System.out.println(num%10);
+			num=num/10;
+			
+		}
+		
+				
+
+	}
+
+}

@@ -1,0 +1,124 @@
+package tt;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner Scan = new Scanner(System.in);
+		
+		System.out.println("\r\n"
+				+ "██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗    ████████╗ ██████╗ \r\n"
+				+ "██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║    ╚══██╔══╝██╔═══██╗\r\n"
+				+ "██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║       ██║   ██║   ██║\r\n"
+				+ "██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║       ██║   ██║   ██║\r\n"
+				+ "╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║       ██║   ╚██████╔╝\r\n"
+				+ " ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝       ╚═╝    ╚═════╝ \r\n"
+				+ "                                                                            \r\n"
+				+ "");
+		
+		System.out.println("\r\n"
+				+ " ▄█        ▄██████▄      ███         ███        ▄████████       ▄████████  ▄█  ███▄▄▄▄      ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████ \r\n"
+				+ "███       ███    ███ ▀█████████▄ ▀█████████▄   ███    ███      ███    ███ ███  ███▀▀▀██▄   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███ \r\n"
+				+ "███       ███    ███    ▀███▀▀██    ▀███▀▀██   ███    █▀       ███    █▀  ███▌ ███   ███   ███    █▀  ███   ███   ███   ███    ███ \r\n"
+				+ "███       ███    ███     ███   ▀     ███   ▀  ▄███▄▄▄          ███        ███▌ ███   ███  ▄███▄▄▄     ███   ███   ███   ███    ███ \r\n"
+				+ "███       ███    ███     ███         ███     ▀▀███▀▀▀          ███        ███▌ ███   ███ ▀▀███▀▀▀     ███   ███   ███ ▀███████████ \r\n"
+				+ "███       ███    ███     ███         ███       ███    █▄       ███    █▄  ███  ███   ███   ███    █▄  ███   ███   ███   ███    ███ \r\n"
+				+ "███▌    ▄ ███    ███     ███         ███       ███    ███      ███    ███ ███  ███   ███   ███    ███ ███   ███   ███   ███    ███ \r\n"
+				+ "█████▄▄██  ▀██████▀     ▄████▀      ▄████▀     ██████████      ████████▀  █▀    ▀█   █▀    ██████████  ▀█   ███   █▀    ███    █▀  \r\n"
+				+ "▀                                                                                                                                  \r\n"
+				+ "");
+		
+		String[][] arr = new String[5][5];
+		
+		
+		while(true) {
+		
+		System.out.println(" ----------------------- \n 남은 자석을 확인(1)\n 좌석 예매하기(2)\n 예매 확인하기(3)\n 종료하기(4) \n -----------------------");
+		System.out.print(" 1~4번사이의 수를  입력하시오 : ");
+		int menu_number = Scan.nextInt();
+		System.out.println("-----------------------");
+		
+		switch(menu_number) {
+		
+		case 1: 
+			System.out.println(" ********좌석 확인하기******** ");
+			
+			for (int i=0; i<arr.length; i++) {
+				for (int j=0; j<arr.length; j++) {
+					
+					if(arr[i][j]== null) System.out.printf("   □ ");
+					else {
+						System.out.printf("   ■ ");
+					}
+					
+				}
+				System.out.println("");
+			}
+			System.out.println(" ************************** ");
+			System.out.println();
+			break;
+			
+		case 2: 
+			System.out.println(" ********좌석 예매하기******** ");
+			
+			while (true) {
+				int row =0;
+				int col=0;
+				
+				
+					System.out.println("rows 입력 : ");
+					row = Scan.nextInt();
+			
+					System.out.println("cols 입력 : ");
+					col = Scan.nextInt();
+					if ((row))
+			
+			System.out.println("name 입력 : ");
+			String name = Scan.next();
+			
+			if (arr[row][col]== null) { 
+				arr[row][col]= name;
+				break;
+			} else {
+				System.out.println("그 자리는 이미 다른 고객분이 예매하였습니다 다시 입력하시오");
+			}
+			
+			}
+			System.out.println(" ************************** ");
+			System.out.println();
+			break;
+			
+		case 3: 
+			System.out.println(" ******** 예매 확인하기******** ");
+			System.out.println(" 예약자 성명을 입력하시오");
+			
+			String named = Scan.next();
+			
+			for(int i=0; i<arr.length; i++) {
+				for(int j=0; j<arr.length; j++) {
+					if(arr[i][j]==named) {
+						System.out.println("좌석은 "+i+" 행 "+j+" 열 입니다");
+					} else if (arr[i][j]!=named) {
+						System.out.println(" 그 자리에 예약된 이름이 없습니다");
+					}
+				}
+			}
+			
+			
+			break;
+			
+		case 4: 
+			System.out.println(" ******** 종료하기 ********");
+			System.exit(0);
+			break;
+			
+		default : 
+			System.out.println("1~4번 사이의 수가 아닌 다른 것을 입력하였습니다");
+			break;
+			
+			}
+		}
+	}
+}

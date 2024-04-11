@@ -1,0 +1,46 @@
+package Main;
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class first {
+
+	public static void main(String[] args) {
+		
+		Scanner Scan = new Scanner(System.in);
+		Random random = new Random();   //랜덤문을 생성
+		
+		int 술 = random.nextInt(49)+1; // int = random.nextInt(자신이 원하는 정수 입력하면 -1 만큼의 아무 수나 입력받음)
+		int total = 1;
+		System.out.println("숫자 맛추기 게임 시작!");
+		System.out.println("------------------------------");
+    
+		System.out.println(("내가 어떤 숫자를 정했는지 맞춰볼래?"));
+		System.out.println("------------------------------");
+    
+		while (true) {        
+			int 입력 = Scan.nextInt();
+			System.out.println("------------------------------"); // 정수를 입력
+      
+			if(입력>술) {
+				System.out.println(" 다운 ");
+				System.out.println("------------------------------"); // 입력값이 더 클때 다운 출력
+        
+		} 	else if (입력<술) {
+				System.out.println(" 업 ");
+				System.out.println("------------------------------"); // 입력값이 더 작을때 업 출력
+        
+		} 	else if (입력==술) {
+				System.out.println(" 정답 "+total+"번 시도하여 맞췄습니다"); // 술의 값을 맞췄을 때 입력
+				System.out.println("------------------------------");
+				break;
+		
+		} 	else if (입력!=술) {
+				System.out.println(" 양수가 아닌 다른것을 입력 하였습니다"); //양수가 아닌 음수나 유리수 문자열 사용할때 출력함
+				System.out.println("------------------------------");
+			}
+			total++; //몇번 시도 했는지 알기위한 1부터 정답까지 시도한 만큼 증가
+		}
+	}
+
+while, if, break, random을 사용하여 랜덤숫자 프로그램 작성

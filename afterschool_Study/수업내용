@@ -1,0 +1,34 @@
+변수 만드는 방법 int (변수명);
+(변수명)[int 할시에는 에러가 뜸] = (대입할 식);
+
+
+숫자
+1 int,long | 정수를 저장하기 위하 타입(20억이 넘을 땐 long)
+2 float,double 실수를 저장하기 위한 타입(float는 오차없이 7자리, double은 15자리)
+
+문자
+char 문자를 저장하기 위한 타입
+string 여러 문자(문자열, string)를 저장하기 위한 타입
+
+
+과제
+
+변수 하나 만들기
+변수에 정수 정하기
+변수 출력
+변수 생일 정하기
+변수 출력
+
+public class main {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int x = 1230;
+		int y = 18;
+		System.out.println(x);
+		System.out.println(y);
+		
+
+	}
+
+}

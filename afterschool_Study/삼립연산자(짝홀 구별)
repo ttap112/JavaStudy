@@ -1,0 +1,14 @@
+임의로 정한 정수가 짝홀인지 판별하는 코드를 짜시오 (삼립연산자 사용)
+package mAIN;
+
+public class main {
+
+	public static void main(String[] args) {
+		int a = 20; //임의
+		String 결과 = "";
+		결과 = (a%2==0)? "짝수" : "홀수";
+		System.out.println(결과);
+
+	}
+
+}

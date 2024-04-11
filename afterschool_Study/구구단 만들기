@@ -1,0 +1,72 @@
+while 문으로 구구단 만들기
+import java.util.Scanner;
+
+public class Mains {
+
+	public static void main(String[] args) {
+		Scanner a = new Scanner(System.in);
+		System.out.println("정수를 입력하시오");
+		
+		int num = a.nextInt();
+		
+		int num2 = 1;
+		
+		while(num2<=9) {
+			System.out.println(num+" * "+num2+" = "+(num*num2));
+			num2 += 1;
+		}
+		
+
+	}
+
+}
+for문으로 구구단 만들기
+import java.util.Scanner;
+
+public class Mains {
+
+	public static void main(String[] args) {
+		Scanner a = new Scanner(System.in);
+		System.out.println("정수를 입력하시오");
+		
+		int num = a.nextInt();
+		
+		int num2 = 1;
+		
+		for (num2=1; num2<=9; num2++)
+			System.out.println(num+" * "+num2+" = "+(num*num2));
+		
+
+	}
+
+}
+몇단까지 볼건지 정수를 입력받고 *9까지 출력했다 "몇단"볼지랑 "몇까지 곱할건지" 입력받아서 출력하는 프로그램
+import java.util.Scanner;
+
+public class S {
+
+	public static void main(String[] args) {
+		Scanner num1 = new Scanner(System.in);
+		
+		System.out.println("정수를 입력");
+		int a = num1.nextInt();
+		Scanner bb = new Scanner(System.in);
+		
+		
+		System.out.println("몇번 곱할건지 입력");
+		int b = bb.nextInt();
+		
+		
+		int c = 1;
+		
+		for(c=1; c<=b; c++) {
+			System.out.println(a+" * "+c+" = "+(a*c));
+		}
+			
+		
+
+	}
+
+}
+
+

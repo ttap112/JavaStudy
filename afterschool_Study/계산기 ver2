@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner Scan = new Scanner(System.in);
+		
+		System.out.println("------------------------------");
+		System.out.println("계산기를 실행합니다");
+		System.out.println("1.계산기 실행 2.종료");
+		int 시작 = Scan.nextInt();
+		System.out.println("------------------------------");
+		
+		while (true) {
+			if (시작==1) {
+				System.out.println("계산기 실행");
+				System.out.println("1. 더하기 2는 빼기 3은 나누기 4는 곱하기");
+				int 사칙 = Scan.nextInt();
+				System.out.println("------------------------------");
+				if (사칙==1) {
+					System.out.println("1. 더하기를 선택하셨습니다");
+					System.out.println("두 정수를 입력하십시오");
+					int a = Scan.nextInt();
+					int b = Scan.nextInt();
+					int c = 0;
+					c = a+b;
+					System.out.println(a+" + "+b+" = "+c+" 입니다.");
+					System.out.println("------------------------------");
+				} else if (사칙==2) {
+					System.out.println("2. 빼기를 선택하셨습니다");
+					System.out.println("두 정수를 입력하십시오");
+					int a = Scan.nextInt();
+					int b = Scan.nextInt();
+					int c = 0;
+					c = a-b;
+					System.out.println(a+" - "+b+" = "+c+" 입니다.");
+					System.out.println("------------------------------");
+				} else if (사칙==3) {
+					System.out.println("3. 나누기를 선택하셨습니다");
+					System.out.println("두 정수를 입력하십시오");
+					
+					int a = Scan.nextInt();
+					int b = Scan.nextInt();
+					int c = 0;
+					c = a/b;
+					System.out.println(a+" / "+b+" = "+c+" 입니다.");
+					System.out.println("------------------------------");
+				} else if (사칙==4) {
+					System.out.println("4. 곱하기를 선택하셨습니다");
+					System.out.println("두 정수를 입력하십시오");
+					int a = Scan.nextInt();
+					int b = Scan.nextInt();
+					int c = 0;
+					c = a*b;
+					System.out.println(a+" * "+b+" = "+c+" 입니다.");
+					System.out.println("------------------------------");
+				}  
+					System.out.println("계속하겠습니까?");
+					System.out.println("1. 계속하기 2. 종료");
+					int 반복 = Scan.nextInt();
+					System.out.println("------------------------------");
+					if (반복==1) {
+						continue;
+					} else if (반복==2) {
+						System.out.println("종료합니다");
+						break;
+						
+					}
+					
+				
+					
+					
+				} else if (시작==2) {
+					System.out.println("종료합니다");
+					break;
+			}
+			
+		}
+	}

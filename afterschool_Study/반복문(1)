@@ -1,0 +1,38 @@
+while(조건) {
+  조건이 참이면 실행;
+  // flag 변수 ++;
+  // break;
+}
+1부터 10까지 출력하는 반복문
+int a = 1;
+while (a<=10) {
+System.out.println(a)
+a++;
+}
+
+for(초기값; 조건; 증감식)
+for (a=1; a<=10; a++) {
+  System.out.print("*")
+ }
+[10번 동언 별 10개를 출력하는 문장]	  
+    int a= 1;
+		int b= 1;
+		
+			for( b=1; b<=10; b++) {
+				for(a=1; a<=10; a++) {
+					System.out.print("*");
+				
+			}
+				System.out.println();
+			}
+폴문이 한바퀴 돌때마다 *별이 증가하는 프로그램 작성
+		int a= 1;
+		int b= 1;
+		
+			for( b=1; b<=10; b++) { 
+				for(a=1; a<=b; a++) {
+					System.out.print("*");
+				
+			}
+				System.out.println()
+        }

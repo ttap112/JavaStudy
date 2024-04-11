@@ -1,0 +1,76 @@
+스캐너를 사용하기 위해선 
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner (변수명) = new Scanner(System.in);
+하면 입력문을 만들수가 있다 예를 들자면  
+System.out.println("아무거나 입력하시오")
+int (변수명) = (변수명).nextInt();
+문제 두수를 입력받아 사칙연산을 한 값을 출력하시오
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	int a = sc.nextInt();
+	int b = sc.nextInt();
+	System.out.println(a+b);
+	System.out.println(a-b);
+	System.out.println(a*b);
+	System.out.println(a/b);
+	}
+}
+-----------------------------------------------------------
+ 스위치 함수의 할용방법
+ switch (i) {
+        case 1:         // 1 인 경우
+            System.out.println("1입니다.");
+            break;      
+        case 2:            // 2 인 경우
+            System.out.println("2입니다.");
+            break;
+        case 3:            // 3 인 경우
+            System.out.println("3입니다.");
+            break;
+        default:        // 모두 해당이 안되는 경우
+            System.out.println("기타");
+            break;    
+            
+스위치를 활용하여 a,b를 사칙연산을 통해 결과값을 출력하는 프로그램 작성
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+    
+	int a = sc.nextInt();
+  
+	int b = sc.nextInt();
+  
+	System.out.println("+,-,*,/ 중 하나를 입력하시오");
+  
+	String 연산자 = sc.next();
+  
+	switch(연산자) {
+	case"+" :
+		System.out.println(a+b);
+		break;
+	case"-" :
+		System.out.println(a-b);
+		break;
+	case"*" :
+		System.out.println(a*b);
+		break;
+	case"/" :
+		System.out.println(a/b);;
+		break;
+	default:
+		System.out.println("+,-,*,/ 중에 하나 선택하시오");
+   
+	}
+ }
+}

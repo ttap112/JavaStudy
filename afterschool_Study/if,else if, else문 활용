@@ -1,0 +1,70 @@
+if (조건식){출력문장} if는 ~만약에 ~~라면 true 값을 실행하는 함수
+else if (다른 조건식){출력문자}  else if (또 다른 조건식) {출력문장}
+else(조건식이 없음){출력만중} 그 외의 모든것을 출력함
+
+if (a==1){
+  c
+}
+else if (a==2){
+  b
+}
+else {
+  d
+}
+만약에 if안에 if를 넣고 싶으면
+if (a==1){
+  c
+  if (a==2){
+    d
+  }
+}
+를 하면 오류없이 출력이 가능
+
+라면 끓이기 프로그램 만들기(java 언어로 할것
+{들여쓰기 꼭 하면서 코딩을 짤것 코딩이 길어질수록 나중에 코딩짜면서 햇갈릴 수 있음})
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("라면을 끓여보자!");
+		
+
+		System.out.println("가스레인지 앞어 섰다.");
+		
+		System.out.println("1. 불을 킨다.   2. 귀찮다 그냥 잔다");
+		
+		int a = sc.nextInt();
+		
+		if(a==1) {
+			System.out.println("불이 켜짐");
+			System.out.println("물이 끓네요 보글보글");
+			System.out.println("1.스프,면을 넉는다 2.귀찮다,그냥 편의점을 간다");
+		
+			int b = sc.nextInt();
+			
+			if(b==1) {
+				System.out.println("면과 스프를 넣고  2분을 더 끓인다");
+				System.out.println("라멱을 먹는다");
+			}
+			else if(b==2) {
+				System.out.println("편의점을 간다");
+			}
+			
+		}
+		
+		else if(a==2) {
+			System.out.println("그냥 잔다");
+			
+		}
+		
+		else {
+			System.out.println("1또는 2를 입력하시오");
+		}
+	
+	}
+
+}
