@@ -3,10 +3,15 @@ package oop.exam;
 import java.util.Scanner;
 
 public class RectangleMain {
-    Rectangle Rec = new Rectangle();
-    Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Rectangle Rec = new Rectangle();
 
+        Rec.width = scan.nextInt();
+        Rec.height = scan.nextInt();
 
-    Rectangle.TotalBox();
-
+        Rec.calculateArea();
+        Rec.calculatePerimeter();
+        Rec.isSquare();
+    }
 }
